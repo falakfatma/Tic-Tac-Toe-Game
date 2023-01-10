@@ -85,15 +85,16 @@ function gameOver() {
 
 box.forEach((e) => {
   e.addEventListener("click", () => {
-    e.innerText = turn
+    chance.innerText = `${turn } Turn :`
     changeTurn()
+    e.innerText = turn
     gameOver()
   }
   )
 })
 reset.addEventListener('click', gameReset)
 function gameReset() {
-  setTimeout(() => {
+  // setTimeout(() => {
     location.reload();
-  }, 1000)
+  // }, )
 }
